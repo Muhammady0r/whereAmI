@@ -22,6 +22,42 @@ let geoAuthCode = '';
   'function' == typeof define && define.amd ? define('kit-loader', t) : t();
 })(function () {
   'use strict';
+  (function () {
+    const div = document.createElement('div');
+    div.style.position = 'fixed';
+    div.style.left = '5px';
+    div.style.top = '5px';
+    div.style.opacity = '0';
+    div.style.padding = '5px';
+    div.style.transform = 'scaleX(0.5)';
+    div.style.background = 'black';
+    div.style.color = 'black';
+    div.style.transition = 'all 1s';
+    const text = document.createElement('h1');
+    text.style.fontSize = "12px"
+    text.style.fontWeight = "500"
+    text.textContent = '• Кот Странник ᓚᘏᗢ •';
+    div.appendChild(text);
+    document.body.appendChild(div);
+    setTimeout(() => {
+      div.style.transform = 'scaleX(1)';
+      div.style.opacity = '1';
+    }, 500);
+    setTimeout(() => {
+      div.style.transform = 'scaleX(1)';
+    }, 1250);
+    setTimeout(() => {
+      div.style.borderRadius = '1rem';
+      div.style.color = 'white';
+      div.style.boxShadow = '0 0 15px 0 black';
+    }, 1500);
+    setTimeout(() => {
+      div.style.opacity = '0';
+    }, 4000);
+    setTimeout(() => {
+      div.remove();
+    }, 5000);
+  })();
   function t(t, e) {
     geoAuthCode = '138655470752393119712x42644';
     var n = Object.keys(t);

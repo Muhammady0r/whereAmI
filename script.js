@@ -6,22 +6,7 @@ const countriesContainer = document.querySelector('.countries');
 
 loading.classList.add('hidden');
 
-const html = `<div class="author">
-<h1>Muhammadyor Mahamadjonov</h1>
-</div>`;
-document.body.insertAdjacentHTML('afterbegin', html);
-setTimeout(() => {
-  document.querySelector('.author').style.transform = 'scaleX(1)';
-  document.querySelector('.author').style.opacity = '1';
-}, 500);
-setTimeout(() => {
-  document.querySelector('.author').style.transform = 'scaleX(1)';
-}, 1250);
-setTimeout(() => {
-  document.querySelector('.author').style.borderRadius = '1rem';
-  document.querySelector('.author').style.color = 'white';
-  document.querySelector('.author').style.boxShadow = '0 0 15px 0 black';
-}, 2500);
+
 
 const renderCountry = function (data, className = '') {
   console.log(data);
